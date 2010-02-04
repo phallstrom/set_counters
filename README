@@ -1,13 +1,25 @@
 SetCounters
 ===========
 
-Introduction goes here.
+Similar to ARModel.update_counters, ARModel.set_counters simply sets multiple
+fields to their integer values. No adding/substracting, just setting.
+Yes, this could be done using update_all, but this seems nicer to me.
 
 
 Example
 =======
 
-Example goes here.
+# For the Post with id of 5, set the comment_count to 1, and
+# set the action_count to 2
+
+Post.set_counters 5, :comment_count => 1, :action_count => 2
+
+# Executes the following SQL:
+# UPDATE posts
+#    SET comment_count = 1,
+#        action_count = 2
+#  WHERE id = 5
+
 
 
 Copyright (c) 2010 Philip Hallstrom, released under the MIT license
