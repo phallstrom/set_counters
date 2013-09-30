@@ -11,6 +11,7 @@ Gem::Specification.new do |gem|
   gem.description   = %q{Easy setting of multiple counters in Active Record models.}
   gem.summary       = %q{Easy setting of multiple counters in Active Record models.}
   gem.homepage      = "https://github.com/phallstrom/set_counters"
+  gem.version       = "MIT"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
