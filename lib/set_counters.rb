@@ -34,7 +34,7 @@ module SetCounters
         updates = counters.inject([]) { |list, (counter_name, value)|
           list << "#{connection.quote_column_name(counter_name)} = #{value.to_i}"
         }.join(", ")
-        update_all(updates, "#{connection.quote_column_name(primary_key)} = #{quote_value(id)}")
+        update_all(updates, "#{connection.quote_column_name(primary_key)} = #{quote_value(id, columns_hash[primary_key])}")
       end
     end
 

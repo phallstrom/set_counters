@@ -17,4 +17,11 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+
+  gem.add_dependency 'activerecord', '~> 4.1'
+
+  gem.add_development_dependency 'bundler', '~> 1.7'
+  gem.add_development_dependency 'rake', '~> 10.0'
+  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'sqlite3'
 end
